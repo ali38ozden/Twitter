@@ -8,7 +8,7 @@ kacKisiTakipEdildi=0
 Giris_Yapildimi=True
 
 #-----------------bizim belirlediğimiz
-Bir_Sayfada_KacKisi_Takip=0
+Bir_Sayfada_KacKisi_Takip=15
 
 options = webdriver.ChromeOptions()
 options.add_argument('--user-data-dir=C:\\Users\\ali\\AppData\\Local\\Google\\Chrome\\User Data')
@@ -43,7 +43,7 @@ sleep(5)
 driver.get("https://twitter.com/i/connect_people")
 sleep(5)
 
-for i in range(30):
+for i in range(10):
 
     for a in range(Bir_Sayfada_KacKisi_Takip):
 
@@ -55,10 +55,12 @@ for i in range(30):
         except:
             kacKereGecildi=kacKereGecildi+1
             pass       
-        sleep(1.7)
+        sleep(1)
     driver.refresh()
-    print("Button: "+b+" gecildi                SimdiyeKadarGecilen: "+kacKereGecildi+"            Kac kisi takip ediliyor: "+kacKisiTakipEdildi)
-    sleep(300)
+    print("Button: "+b+" gecildi                SimdiyeKadarGecilen: "+str(kacKereGecildi)+"            Kac kisi takip ediliyor: "+str(kacKisiTakipEdildi))
+    sleep(10)
+    if(kacKisiTakipEdildi>300):
+        break
 
 print("Bitti")
 
