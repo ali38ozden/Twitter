@@ -43,7 +43,7 @@ sleep(5)
 driver.get("https://twitter.com/i/connect_people")
 sleep(5)
 
-for i in range(10):
+for i in range(40):
 
     for a in range(Bir_Sayfada_KacKisi_Takip):
 
