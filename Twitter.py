@@ -59,7 +59,7 @@ for i in range(40):
     driver.refresh()
     print("Button: "+b+" gecildi                SimdiyeKadarGecilen: "+str(kacKereGecildi)+"            Kac kisi takip ediliyor: "+str(kacKisiTakipEdildi))
     sleep(10)
-    if(kacKisiTakipEdildi>250):
+    if(kacKisiTakipEdildi>125):
         break
 
 print("Bitti")
