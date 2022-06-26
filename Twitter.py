@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
+from tkinter import messagebox
 
 kacKereGecildi=0
 kacKisiTakipEdildi=0
@@ -59,8 +60,9 @@ for i in range(40):
     driver.refresh()
     print("Button: "+b+" gecildi                SimdiyeKadarGecilen: "+str(kacKereGecildi)+"            Kac kisi takip ediliyor: "+str(kacKisiTakipEdildi))
     sleep(10)
-    if(kacKisiTakipEdildi>125):
+    if(kacKisiTakipEdildi>70):
         break
 
+messagebox.showinfo("Bitt","büttün işler bitti")
 print("Bitti")
 
